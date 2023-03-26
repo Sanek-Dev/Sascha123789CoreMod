@@ -5,9 +5,10 @@ plugins {
 }
 
 apply plugin: 'java'
+apply plugin: 'maven-publish'
 
-version = project.mod_version
-group = project.maven_group
+version = '1.0'
+group = 'com.github.Sanek-Discord'
 
 repositories {
     // Add repositories to retrieve artifacts from in here.
@@ -48,6 +49,10 @@ tasks.withType(JavaCompile).configureEach {
 
 
 java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+
     def javaVersion = JavaVersion.toVersion(targetJavaVersion)
     if (JavaVersion.current() < javaVersion) {
         toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
@@ -79,5 +84,6 @@ publishing {
         // Notice: This block does NOT have the same function as the block in the top level.
         // The repositories here will be used for publishing your artifact, not for
         // retrieving dependencies.
+        maven { url 'https://jitpack.io' }
     }
 }
