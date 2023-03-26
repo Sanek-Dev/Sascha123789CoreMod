@@ -6,3 +6,5 @@ before_install:
   - sdk install gradle
   - gradle wrapper
   - gradle init
+install:
+  - gradle init
