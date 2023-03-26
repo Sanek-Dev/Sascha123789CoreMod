@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "sascha123789_core_mod",
+  "version": "${version}",
+  "name": "Sascha123789 Core Mod",
+  "description": "Utility mod for other mods",
+  "authors": [
+    "Sascha123789"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/sascha123789_core_mod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.sascha123789.sascha123789_core_mod.Main"
+    ]
+  },
+  "mixins": [
+    "sascha123789_core_mod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.18",
+    "minecraft": "1.19.4"
+  }
+}
