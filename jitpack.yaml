@@ -1,3 +1,2 @@
-before_install:
-   - sdk install java
-   - sdk use java
+jdk:
+  - openjdk17
