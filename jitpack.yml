@@ -7,4 +7,4 @@ before_install:
    - gradle wrapper
    - gradlew install
 install:
-   - ls
+   - cp build.gradle gradle.properties gradlew.bat jitpack.yml options.txt settings.gradle usercache.json ../../../tmp && cd ../../../tmp && ls
